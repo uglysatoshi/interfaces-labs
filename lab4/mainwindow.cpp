@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QAction>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -7,20 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->pushButton->setToolTip("Подсказка<BR><B>ПАСХАЛОЧКА</B>");
-    QMenu* menu = new QMenu("&Menu");
-    menu->addAction("&About Qt", parent, SLOT(aboutQt()), Qt::CTRL+Qt::Key_Q);
-    menu->addSeparator();
-    menu->addAction("&CheckableItem");
-    QMenu* pmnuSubMenu = new QMenu("&SubMenu", menu);
-    pmnuSubMenu->addAction("&Test");
-    menu->addMenu(pmnuSubMenu);
-    QAction* pDisableAction = menu->addAction("&DisableItem");
-    pDisableAction->setEnabled(false);
-    menu->addSeparator();
-    menu->addAction("&Exit", parent, SLOT(quit()));
-    menu->setTearOffEnabled(true);
-    ui->menuBar->addMenu(menu);
-
+//    ui->menuBar->addMenu(menu);
 }
 
 MainWindow::~MainWindow()
