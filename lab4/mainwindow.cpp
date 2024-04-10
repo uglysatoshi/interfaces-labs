@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->pushButton->setToolTip("Подсказка<BR><B>ПАСХАЛОЧКА</B>");
-//    ui->menuBar->addMenu(menu);
 }
 
 MainWindow::~MainWindow()

@@ -55,13 +55,11 @@ class MyApp(QWidget):
         self.clock_widget.show()
 
     def start_array(self):
-        array, ok = QInputDialog.getText(self, "Enter Array", "Enter numbers separated by space:")
-        if ok:
-            array = array.split()
-            processed_array = [int(num) for num in array if (num.isdigit())]
-            processed_array = [num for num in processed_array if 20 >= num >= 1]
-            random.shuffle(processed_array)
-            QMessageBox.information(self, "Processed Array", f"The processed array is:\n{processed_array}")
+        array = []
+        for i in range(20):
+            array.append(i)
+        random.shuffle(array)
+        QMessageBox.information(self, "Processed Array", f"The processed array is:\n{array}")
 
 
 if __name__ == '__main__':
