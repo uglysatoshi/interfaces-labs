@@ -74,6 +74,7 @@ class AuthApp(QWidget):
 
         self.text_label.setText(converted_text.strip())
 
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = AuthApp()
