@@ -102,10 +102,10 @@ class MainWindow(QtWidgets.QMainWindow):
             self.canvas.pixmap().save(file_path)
 
     def increase_pen_width(self):
-        self.canvas.set_pen_width(self.canvas.pen_width + 1)
+        self.canvas.set_pen_width(self.canvas.pen_width + 5)
 
     def decrease_pen_width(self):
-        self.canvas.set_pen_width(self.canvas.pen_width - 1)
+        self.canvas.set_pen_width(self.canvas.pen_width - 5)
 
     def change_pen_color(self):
         color = QtWidgets.QColorDialog.getColor()
